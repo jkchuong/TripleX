@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 void PrintIntroduction(int LevelDifficulty)
 {
@@ -7,11 +8,13 @@ void PrintIntroduction(int LevelDifficulty)
     std::cout << "Enter the correct code to continue..." << std::endl;
 }
 
-bool PlayGame()
+bool PlayGame(int LevelDifficulty)
 {
-    const int A = 4;
-    const int B = 3;
-    const int C = 2;
+    PrintIntroduction(LevelDifficulty);
+
+    const int A = rand() % LevelDifficulty + LevelDifficulty;
+    const int B = rand() % LevelDifficulty + LevelDifficulty;
+    const int C = rand() % LevelDifficulty + LevelDifficulty;
 
     const int Sum = A + B + C;
     const int Product = A * B * C;
@@ -42,14 +45,16 @@ bool PlayGame()
 
 int main()
 {
-    int LevelDifficulty = 1;
+    srand(time(NULL));
 
-    while (LevelDifficulty <= 3)
+    int LevelDifficulty = 1;
+    int MaxDifficulty = 5;
+
+    while (LevelDifficulty <= MaxDifficulty)
     {
         bool LevelComplete;
 
-        PrintIntroduction(LevelDifficulty);
-        LevelComplete = PlayGame();
+        LevelComplete = PlayGame(LevelDifficulty);
 
         if (!LevelComplete)
         {
