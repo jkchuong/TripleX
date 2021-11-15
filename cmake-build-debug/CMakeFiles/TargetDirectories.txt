@@ -1,0 +1,3 @@
+C:/Users/jcsou/Documents/source/repos/TripleX/cmake-build-debug/CMakeFiles/TripleX.dir
+C:/Users/jcsou/Documents/source/repos/TripleX/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jcsou/Documents/source/repos/TripleX/cmake-build-debug/CMakeFiles/rebuild_cache.dir
